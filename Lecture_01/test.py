@@ -44,4 +44,4 @@ def isPalindrome(number) -> bool:
   
 
 
-print(isPalindrome(121));
+print(isPalindrome(1321));
