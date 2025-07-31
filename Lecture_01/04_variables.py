@@ -4,6 +4,6 @@ total_years = 25;
 
 URL = "www.wikipedia.org";
 
-zelda = "minish cap"
-zelda = True;
+zelda: str = "minish cap"
+zelda: bool = True;
 print(zelda);
