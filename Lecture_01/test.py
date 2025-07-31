@@ -26,22 +26,22 @@ Constraints:
 
 Follow up: Could you solve it without converting the integer to a string? """
 
-number = "123";
-for i in range(len(number) - 1, -1,-1):
-  print(number[i]);
 
-""" def isPalindrome(number) -> bool:
+def isPalindrome(number) -> bool:
   ## 1. convert into a string
   parsed_str_number: str = str(number);
   ## 2. reverse the string and then compare with the original 
   reversed_string = "";
-  for i in range(len(parsed_str_number), 0, -1):
+  for i in range(len(parsed_str_number) - 1, -1, -1):
     current_char = parsed_str_number[i];
-    print(current_char);
-    reversed_string++current_char;
+    reversed_string += current_char;
+  ## 3. final comparison:
+  if (reversed_string == parsed_str_number):
+    return True;
+  else:
+    return False;
 
-  print(reversed_string);
+  
 
 
-print(isPalindrome(123));
- """
+print(isPalindrome(121));
