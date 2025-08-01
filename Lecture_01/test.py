@@ -41,7 +41,12 @@ def isPalindrome(number) -> bool:
   else:
     return False;
 
-  
+def isPalindromeWithouhString(number) -> bool:
+  ## 1. store our original number
+  x_original = number;
+## 2, intialize reverse_number
+  x_reverse = 0;
+  while x_or  
 
 
 print(isPalindrome(1321));
