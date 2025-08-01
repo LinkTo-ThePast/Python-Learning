@@ -41,12 +41,24 @@ def isPalindrome(number) -> bool:
   else:
     return False;
 
-def isPalindromeWithouhString(number) -> bool:
+def isPalindromeWithoutString(num) -> bool:
+  ## handling negative number case
+  if (num < 0): 
+    return False
   ## 1. store our original number
-  x_original = number;
-## 2, intialize reverse_number
-  x_reverse = 0;
-  while x_or  
+  x_original = num
+  ## 2, intialize reverse_number
+  x_reverse = 0
+  while num > 0: 
+    ## begin to remove characters right to left
+    number_to_remove = num % 10;  
+    ## add removed number into our reversed number and move it into the left ( x 10 );
+    x_reverse = x_reverse * 10 + number_to_remove
+    ## move to the next number to remove in our original number
+    num = num // 10
+  
+  return x_reverse == x_original; 
 
 
-print(isPalindrome(1321));
+##print(isPalindrome(1321));
+print(isPalindromeWithoutString(121));
