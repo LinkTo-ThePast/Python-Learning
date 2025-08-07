@@ -42,23 +42,23 @@ def isPalindrome(number) -> bool:
     return False;
 
 def isPalindromeWithoutString(num) -> bool:
-  ## handling negative number case
+  ## handling case of negative numbers
+  ## -121 !== 121-
   if (num < 0): 
-    return False
-  ## 1. store our original number
-  x_original = num
-  ## 2, intialize reverse_number
-  x_reverse = 0
-  while num > 0: 
-    ## begin to remove characters right to left
-    number_to_remove = num % 10;  
-    ## add removed number into our reversed number and move it into the left ( x 10 );
-    x_reverse = x_reverse * 10 + number_to_remove
-    ## move to the next number to remove in our original number
-    num = num // 10
-  
-  return x_reverse == x_original; 
+    return False;
 
+  ## begin inversion process
+  # 1. store our original number
+  original_number = num;
+  # 2. initialize a new number: the reverse
+  reversed_number = 0; 
+  # 3. loop while num > 0
+  ## input example: 151 ---> (1 * 10) posicional + removed number
+  while num  > 0:
+    current_removed_number = num % 10;
+    reversed_number = (reversed_number * 10) + current_removed_number;
+    num = num // 10
+  return original_number == reversed_number;
 
 ##print(isPalindrome(1321));
-print(isPalindromeWithoutString(121));
+print(isPalindromeWithoutString(1551));
