@@ -14,5 +14,4 @@ def two_sum(number_array, target):
   if len(indeces) == 0:
     return "Not possible solution given the input array!"
   
- 
-
+ ## not optimum
