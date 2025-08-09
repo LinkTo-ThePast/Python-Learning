@@ -1,17 +1,20 @@
 def two_sum(number_array, target):
-  ## 1. example input: [2, 9, 7, 10]; target = 11;
-  indeces = [];
+  ## 1. example input: [1,3,5,8,9]
+  ## storage for indices
+  result_indices = [];
+  ## first cycle: going to retrieve the first number of the array
+  ## second cycle: going to retrieve the following immediate number of the array
   for i in range(len(number_array)):
     current_number = number_array[i];
-    print(current_number);
-    for j in range(i+1,len(number_array)):
+    ## next number
+    for j in range(i+1, len(number_array)):
       next_number = number_array[j]
-      print(next_number);
-      if (current_number + next_number == target):
-        indeces.append(i);
-        indeces.append(j);
-        return indeces;
-  if len(indeces) == 0:
+      ## now that we have two numbers, add them up
+      if next_number + current_number == target:
+        result_indices.append(i)
+        result_indices.append(j)
+  if not result_indices: 
     return "Not possible solution given the input array!"
-  
- ## not optimum
+  return result_indices;
+
+print(two_sum([1,2,3,4,7], 7))
