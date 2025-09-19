@@ -5,7 +5,8 @@ if achieved:
 elif achieved == "more or less":
   print("Maybe")
 
-  
+elif achieved == "kinda":
+  print("maybe")
 
 
   
